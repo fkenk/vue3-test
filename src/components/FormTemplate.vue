@@ -12,7 +12,7 @@
             class="my-1"
             :error-messages="v$.email.$errors.map(error => error.$message)"
             label="Email"
-            variant="outlined"
+            variant="solo"
             type="email"
           />
           <v-text-field
@@ -20,16 +20,19 @@
             class="my-1"
             :error-messages="v$.password.$errors.map(error => error.$message)"
             label="Password"
-            variant="outlined"
+            variant="solo"
             type="password"
           />
-          <v-btn
-            color="primary"
-            type="submit"
-            :disabled="v$.$invalid"
-          >
-            Login
-          </v-btn>
+          <v-card-actions>
+            <v-spacer />
+            <v-btn
+              color="primary"
+              type="submit"
+              :disabled="v$.$invalid"
+            >
+              Login
+            </v-btn>
+          </v-card-actions>
         </v-form>
       </v-card-text>
     </v-card>
