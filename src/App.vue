@@ -1,24 +1,15 @@
 <template>
   <v-app>
     <v-main>
-      <helloworld />
+      <nav>
+        <router-link to="/">
+          Home
+        </router-link> |
+        <router-link to="/about">
+          About
+        </router-link>
+      </nav>
+      <router-view />
     </v-main>
   </v-app>
 </template>
-<script>
-import { defineComponent } from 'vue'
-import helloworld from './components/helloworld.vue'
-
-export default defineComponent({
-  name: 'App',
-
-  components: {
-    helloworld,
-  },
-
-  setup() {
-    // Data goes here
-    return {}
-  }
-})
-</script>
