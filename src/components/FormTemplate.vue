@@ -22,6 +22,7 @@
             label="Password"
             variant="solo"
             type="password"
+            autocomplete="on"
           />
           <v-card-actions>
             <v-spacer />
